@@ -1,0 +1,23 @@
+{
+  "main_menu": [
+    {"label": "Home", "url": "/", "name": "home"},
+    {"label": "Car Rental", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
+    {"label": "Blogs & Articles", "url": "/blog", "name": "blog.index"}
+  ],
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "register_desc": "Already have an account?",
+    "register_fields": ["Name", "Email", "Password", "Confirm Password"],
+    "login_desc": "Don't have an account?"
+  },
+  "footer": {
+    "address": "Address",
+    "links": "Links",
+    "other_links": "Other Links"
+  },
+  "common": {
+    "contact": "Contact"
+  },
+  "welcome": "Welcome"
+}

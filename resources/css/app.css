@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Mamba Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Mamba Regular"), url("Mamba Ice Cream 1.woff") format("woff");
+}
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-mamba: "Mamba Regular", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #1452a5;
+    --color-primary-dark: #1425a6;
+    --color-danger: red;
+    --color-success: green;
+    --color-text: #333333;
+}
+
+.container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full;
+}
+
+button,
+a {
+    @apply cursor-pointer;
+}
+
+.h1 {
+    @apply capitalize text-4xl font-bold;
+}
+
+.h2 {
+    @apply capitalize text-3xl font-semibold;
+}
+
+.layer {
+    @apply fixed inset-0 bg-none z-40;
+}
+
+.link {
+    @apply text-primary hover:text-primary-dark hover:underline transition-all text-sm;
+}
+
+.btn {
+    @apply px-6 py-2 text-sm font-semibold block text-center rounded-lg bg-primary hover:bg-primary-dark transition-all text-white disabled:bg-slate-400 disabled:cursor-wait;
+}
+
+.footer-link {
+    @apply block w-fit text-gray-500 py-1 hover:text-primary transition-all text-sm;
+}
+
+.footer-title {
+    @apply text-lg text-primary font-semibold;
+}

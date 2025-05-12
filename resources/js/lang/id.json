@@ -1,0 +1,23 @@
+{
+  "main_menu": [
+    {"label": "Home", "url": "/", "name": "home"},
+    {"label": "Sewa Mobil", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
+    {"label": "Blog & Artickel", "url": "/blog", "name": "blog.index"}
+  ],
+  "auth": {
+    "login": "Masuk",
+    "register": "Daftar",
+    "register_desc": "Sudah punya akun?",
+    "register_fields": ["Nama", "Email", "Password", "Konfirmasi Password"],
+    "login_desc": "Belum punya akun?"
+  },
+  "footer": {
+    "address": "Alamat",
+    "links": "Tautan",
+    "other_links": "Tautan Lainnya"
+  },
+  "common": {
+    "contact": "Kontak"
+  },
+  "welcome": "Selamat Datang"
+}
