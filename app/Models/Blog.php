@@ -27,7 +27,7 @@ class Blog extends Model
     {
         if ($filters['q'] ?? false) {
             $query->where(function ($q) {
-                $search = str_replace('-', ' ', request('q'));
+                $search = strtolower(str_replace('-', ' ', request('q')));
                 $q->where('title', 'like', '%' . $search . '%')
                     ->orWhere('tags', 'like', '%' . $search . '%');
             });

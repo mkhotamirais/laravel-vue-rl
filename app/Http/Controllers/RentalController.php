@@ -12,9 +12,18 @@ class RentalController extends Controller
 {
     public function index(Request $request)
     {
-        $rentals = Rental::latest()
-            ->filter(request(['rentalcat']))
+        $rentals = Rental::filter(request(['rentalcat']))
+            ->orderByRaw("
+                CASE 
+                    WHEN category = 'Lepas Kunci' AND price = (SELECT MIN(price) FROM rentals WHERE category = 'Lepas Kunci') THEN 1
+                    WHEN category = 'Lepas Kunci' THEN 2
+                    WHEN category = 'Include Driver' AND price = (SELECT MIN(price) FROM rentals WHERE category = 'Include Driver') THEN 3
+                    WHEN category = 'Include Driver' THEN 4
+                    ELSE 5
+                END
+            ")
             ->paginate(4);
+
         $msg = session('msg');
         return inertia('Rental/Index', compact('rentals', 'msg'));
     }

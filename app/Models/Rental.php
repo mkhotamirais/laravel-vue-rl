@@ -22,7 +22,7 @@ class Rental extends Model
     public function scopeFilter($query, array $filters)
     {
         if ($filters['q'] ?? false) {
-            $search = str_replace('-', ' ', request('q'));
+            $search = strtolower(str_replace('-', ' ', request('q')));
             $query->where('name', 'like', '%' . $search . '%');
         }
 
