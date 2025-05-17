@@ -60,7 +60,7 @@ const chooseCategory = (cat) => {
             <CardRental :r="r" :user="user">
               <div
                 v-show="user && user.role === 'admin'"
-                class="px-4 pb-4 flex gap-4"
+                class="relative z-20 px-4 pb-4 flex gap-4"
               >
                 <Link :href="route('sewa-mobil.edit', r)" class="link"
                   >edit</Link
