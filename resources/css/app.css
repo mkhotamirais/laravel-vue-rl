@@ -2,12 +2,6 @@
 
 @import "tailwindcss";
 
-@font-face {
-    font-family: "Mamba Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Mamba Regular"), url("Mamba Ice Cream 1.woff") format("woff");
-}
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
