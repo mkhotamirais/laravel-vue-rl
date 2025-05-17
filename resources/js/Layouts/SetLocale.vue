@@ -14,6 +14,7 @@ const changeLang = () => {
 <template>
   <label for="language-select" class="sr-only">Pilih Bahasa</label>
   <select
+    id="language-select"
     v-model="lang"
     @change="changeLang"
     class="rounded-lg dark:bg-dark py-1 font-poppins text-sm"

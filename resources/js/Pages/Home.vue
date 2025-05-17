@@ -53,6 +53,7 @@ defineProps({
                   width="500"
                   height="500"
                   class="w-full h-full object-cover object-center"
+                  loading="lazy"
                 />
               </Link>
             </template>
