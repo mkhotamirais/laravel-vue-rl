@@ -29,6 +29,7 @@ const chooseCategory = (cat) => {
 </script>
 
 <template>
+  <Head title="Sewa Mobil Lombok" />
   <section class="bg-slate-100 flex-1">
     <div class="text-center bg-white py-8 px-3 shadow">
       <div class="container">

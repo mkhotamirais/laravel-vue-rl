@@ -18,6 +18,7 @@ const i18n = createI18n({
 });
 
 createInertiaApp({
+    title: (title) => `${title ? `${title} - Rental Lombok` : "Rental Lombok"}`,
     resolve: (name) => {
         const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
         let page = pages[`./Pages/${name}.vue`];

@@ -60,4 +60,10 @@ function formatTime(datetime) {
     return `${hari}, ${tanggal} - Jam ${jam}`;
 }
 
-export { formatRupiah, diffForHumans, smartTrim, formatTime };
+function stripHtml(html) {
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    return div.textContent || div.innerText || "";
+}
+
+export { formatRupiah, diffForHumans, smartTrim, formatTime, stripHtml };

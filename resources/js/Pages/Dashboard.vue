@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+  <Head title="Dashboard" />
   <section class="bg-slate-100 py-12">
     <div class="container">
       <div class="max-w-md mx-auto p-8 bg-white rounded-lg">

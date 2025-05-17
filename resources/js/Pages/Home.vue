@@ -14,6 +14,7 @@ defineProps({
 </script>
 
 <template>
+  <Head title="Sewa Mobil di Lombok" />
   <div>
     <!-- Hero -->
     <section class="py-12 relative overflow-hidden">

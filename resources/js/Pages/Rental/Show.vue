@@ -1,10 +1,12 @@
 <script setup>
 import { formatRupiah, smartTrim, diffForHumans } from "@/functions";
+import { capitalize } from "vue";
 
 defineProps({ rental: Object, otherRentals: Object, latestBlogs: Object });
 </script>
 
 <template>
+  <Head :title="`Sewa Mobil ${smartTrim(capitalize(rental.name))}`" />
   <section class="bg-slate-100 min-h-72">
     <div class="container">
       <div class="flex flex-col md:flex-row gap-0 md:gap-4 place-items-start">

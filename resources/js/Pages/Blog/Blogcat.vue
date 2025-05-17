@@ -59,6 +59,7 @@ const search = () => {
 </script>
 
 <template>
+  <Head title="Blog Category" />
   <section class="container py-4">
     <h1 class="h1">Blog Category</h1>
     <hr class="my-2" />

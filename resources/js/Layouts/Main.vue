@@ -19,6 +19,13 @@ const user = computed(() => page.props.auth.user);
 </script>
 
 <template>
+  <Head>
+    <meta
+      head-key="description"
+      name="description"
+      content="Layanan sewa Mobil di Lombok untuk memudahkan Anda menjelajahi keindahan alam Lombok yang menakjubkan."
+    />
+  </Head>
   <div class="flex flex-col min-h-screen">
     <!-- header -->
     <header class="h-16 sticky top-0 bg-white shadow z-50">

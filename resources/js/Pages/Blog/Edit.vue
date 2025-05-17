@@ -28,6 +28,7 @@ const submit = () => {
 </script>
 
 <template>
+  <Head title="Update Blog" />
   <section class="container py-4">
     <h1 class="h1">Update Blog</h1>
 

@@ -27,6 +27,7 @@ const filterCategory = (c) => {
 </script>
 
 <template>
+  <Head title="Blog & Artikel" />
   <section class="bg-slate-100">
     <div class="text-center bg-white py-8 px-3 shadow">
       <div class="container">

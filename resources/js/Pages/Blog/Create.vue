@@ -31,6 +31,7 @@ const submit = () => {
 </script>
 
 <template>
+  <head title="Create Blog" />
   <section class="container py-4">
     <h1 class="h1">Tambah Blog</h1>
 

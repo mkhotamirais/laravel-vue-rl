@@ -1,5 +1,6 @@
 <script setup>
-import { smartTrim, diffForHumans } from "@/functions";
+import { stripHtml, smartTrim, diffForHumans } from "@/functions";
+import { capitalize } from "vue";
 defineProps({
   blog: Object,
   latestBlogs: Object,
@@ -7,6 +8,15 @@ defineProps({
 </script>
 
 <template>
+  <Head>
+    <title>{{ smartTrim(capitalize(blog.title), 35) }}</title>
+    <meta
+      head-key="description"
+      name="description"
+      :content="smartTrim(stripHtml(blog.content), 145)"
+    />
+  </Head>
+
   <section class="bg-slate-100 min-h-72">
     <div class="container">
       <div class="flex flex-col md:flex-row gap-0 md:gap-4 place-items-start">

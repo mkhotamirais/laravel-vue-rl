@@ -23,6 +23,7 @@ const form = useForm({
 </script>
 
 <template>
+  <Head title="Update Rental" />
   <section class="bg-slate-100 py-4">
     <div class="container">
       <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl">
