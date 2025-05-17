@@ -26,10 +26,11 @@
     --color-danger: red;
     --color-success: green;
     --color-text: #333333;
+    --color-gray: #555555;
 }
 
 .container {
-    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full;
+    @apply mx-auto px-3 sm:px-6 lg:px-8 max-w-6xl h-full;
 }
 
 button,
@@ -38,11 +39,15 @@ a {
 }
 
 .h1 {
-    @apply capitalize text-4xl font-bold;
+    @apply capitalize text-3xl lg:text-4xl font-semibold lg:font-bold;
 }
 
 .h2 {
-    @apply capitalize text-3xl font-semibold;
+    @apply capitalize text-2xl lg:text-3xl font-semibold;
+}
+
+.h3 {
+    @apply text-lg font-medium capitalize;
 }
 
 .layer {
@@ -54,7 +59,19 @@ a {
 }
 
 .btn {
-    @apply px-6 py-2 text-sm font-semibold block text-center rounded-lg bg-primary hover:bg-primary-dark transition-all text-white disabled:bg-slate-400 disabled:cursor-wait;
+    @apply px-4 py-2 text-sm font-medium flex items-center justify-center rounded-lg bg-primary hover:bg-primary-dark transition-all text-white disabled:bg-slate-400 disabled:cursor-wait;
+}
+
+.btn-link {
+    @apply text-sm px-3 py-2 my-1 rounded-lg mr-1 hover:text-primary hover:bg-primary/10 transition-all text-gray-500;
+}
+
+.btn-icon {
+    @apply text-lg text-primary p-2.5 bg-primary/5 hover:bg-primary/10 rounded-lg flex items-center justify-center;
+}
+
+.badge {
+    @apply border text-xs text-primary rounded-[2px] px-1 w-fit;
 }
 
 .footer-link {
@@ -63,4 +80,53 @@ a {
 
 .footer-title {
     @apply text-lg text-primary font-semibold;
+}
+
+/* Ckeditor */
+
+.ck-editor__editable {
+    @apply h-48 resize-y;
+}
+
+.ck-editor__editable p {
+    @apply mb-4;
+}
+
+.ck-editor__editable h2,
+.text-content h2 {
+    @apply font-semibold text-xl mb-2 text-gray-800;
+}
+
+.ck-editor__editable h3,
+.text-content h3 {
+    @apply font-semibold text-lg mb-2 text-gray-800;
+}
+
+.ck-editor__editable a,
+.text-content a {
+    @apply font-medium text-primary hover:underline;
+}
+
+.text-content {
+    @apply text-sm lg:text-base leading-relaxed text-gray-600 space-y-4 mt-4 first-letter:uppercase;
+}
+
+.ck-editor__editable ol,
+.text-content ol {
+    @apply list-decimal mb-4 ml-8;
+}
+
+.ck-editor__editable ol li,
+.text-content ol li {
+    @apply pl-2;
+}
+
+.ck-editor__editable ul,
+.text-content ul {
+    @apply list-disc mb-4 ml-8;
+}
+
+.ck-editor__editable ul li,
+.text-content ul li {
+    @apply pl-2;
 }

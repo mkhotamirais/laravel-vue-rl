@@ -1,23 +1,51 @@
 {
+  "dashboard_desc": "Anda telah masuk! akses menu pengguna melalui ikon pengguna di kanan atas layar",
   "main_menu": [
     {"label": "Home", "url": "/", "name": "home"},
     {"label": "Sewa Mobil", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
     {"label": "Blog & Artickel", "url": "/blog", "name": "blog.index"}
   ],
-  "auth": {
+  "user_menu": [
+    {"label": "Sewa Mobil", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
+    {"label": "Blog & Artickel", "url": "/blog", "name": "blog.index"},
+    {"label": "Kategori Blog", "url": "/blogcat", "name": "blogcat.index"}
+  ],
+  "form": {
     "login": "Masuk",
+    "login_desc": "Belum punya akun?",
+    "login_forgot": "Lupa Password?",
     "register": "Daftar",
     "register_desc": "Sudah punya akun?",
-    "register_fields": ["Nama", "Email", "Password", "Konfirmasi Password"],
-    "login_desc": "Belum punya akun?"
+    "register_fields": ["Nama", "Email", "Password", "Konfirmasi Password"]
   },
   "footer": {
     "address": "Alamat",
     "links": "Tautan",
     "other_links": "Tautan Lainnya"
   },
+  "rental": {
+    "title": "Sewa Mobil",
+    "subtitle": "Pilih kendaraanmu dan mulai perjalananmu di Lombok",
+    "order_now": "Pesan Sekarang",
+    "other_rentals": "Rental Lainnya",
+    "term": "Syarat & Ketentuan",
+    "info": "Informasi"
+
+  },
+  "blog": {
+    "title": "Blog & Artikel",
+    "subtitle": "Temukan artikel menarik tentang sewa kendaraan di Lombok, tips perjalanan dan informasi terbaru.",
+    "latest_blogs": "Blog Terbaru"
+  },
+  "home": {
+    "title": "Sewa Mobil Nyaman dan Terjangkau di Lombok",
+    "subtitle": "Kami menyediakan layanan sewa Mobil di Lombok untuk memudahkan Anda menjelajahi keindahan alam Lombok yang menakjubkan.",
+    "all-rentals": "Semua Mobil",
+    "all-blogs": "Semua Blog"
+  },
   "common": {
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "contact-us": "Hubungi Kami"
   },
   "welcome": "Selamat Datang"
 }

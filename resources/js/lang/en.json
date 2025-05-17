@@ -1,23 +1,50 @@
 {
+  "dashboard_desc": "You're logged in! access user menu through user icon on top right of screen",
   "main_menu": [
     {"label": "Home", "url": "/", "name": "home"},
     {"label": "Car Rental", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
     {"label": "Blogs & Articles", "url": "/blog", "name": "blog.index"}
   ],
-  "auth": {
+  "user_menu": [
+    {"label": "Car Rental", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
+    {"label": "Blogs & Articles", "url": "/blog", "name": "blog.index"},
+    {"label": "Blog Category", "url": "/blogcat", "name": "blogcat.index"}
+  ],
+  "form": {
     "login": "Login",
+    "login_desc": "Don't have an account?",
+    "login_forgot": "Forgot Password?",
     "register": "Register",
     "register_desc": "Already have an account?",
-    "register_fields": ["Name", "Email", "Password", "Confirm Password"],
-    "login_desc": "Don't have an account?"
+    "register_fields": ["Name", "Email", "Password", "Confirm Password"]
   },
   "footer": {
     "address": "Address",
     "links": "Links",
     "other_links": "Other Links"
   },
+  "rental": {
+    "title": "Car Rental",
+    "subtitle": "Choose your vehicle and start your journey in Lombok.",
+    "order_now": "Order Now",
+    "other_rentals": "Other Rentals",
+    "term": "Terms & Conditions",
+    "info": "Informations"
+  },
+  "blog": {
+    "title": "Blogs & Articles",
+    "subtitle": "Discover interesting articles about car rental in Lombok, travel tips and the latest news.",
+    "latest_blogs": "Latest Blogs"
+  },
+  "home": {
+    "title": "Comfortable and Affordable Car Rental in Lombok",
+    "subtitle": "We provide car rental services in Lombok to make it easier for you to explore the stunning natural beauty of Lombok.",
+    "all-rentals": "All Rentals",
+    "all-blogs": "All Blogs"
+  },
   "common": {
-    "contact": "Contact"
+    "contact": "Contact",
+    "contact-us": "Contact Us"
   },
   "welcome": "Welcome"
 }

@@ -23,18 +23,18 @@ const submit = () => {
     <div class="container">
       <div class="max-w-md p-6 lg:p-8 bg-white mx-auto rounded-lg shadow">
         <div class="mb-4">
-          <h1 class="h1">{{ $t("auth.register") }}</h1>
+          <h1 class="h1">{{ $t("form.register") }}</h1>
           <p>
-            {{ $t("auth.register_desc") }}
+            {{ $t("form.register_desc") }}
             <Link :href="route('login')" class="link">{{
-              $t("auth.login")
+              $t("form.login")
             }}</Link>
           </p>
         </div>
 
         <form @submit.prevent="submit">
           <Input
-            :label="$t('auth.register_fields[0]')"
+            :label="$t('form.register_fields[0]')"
             id="name"
             icon="id-badge"
             placeholder="Your name"
@@ -59,7 +59,7 @@ const submit = () => {
             :error="form.errors.password"
           />
           <Input
-            :label="$t('auth.register_fields[3]')"
+            :label="$t('form.register_fields[3]')"
             id="password_confirmation"
             type="password"
             placeholder="********"
@@ -67,9 +67,8 @@ const submit = () => {
             v-model="form.password_confirmation"
           />
 
-          <br />
-          <button type="submit" class="btn" :disabled="form.processing">
-            {{ $t("auth.register") }}
+          <button type="submit" class="btn mt-4" :disabled="form.processing">
+            {{ $t("form.register") }}
           </button>
         </form>
       </div>

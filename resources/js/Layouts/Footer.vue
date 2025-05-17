@@ -4,6 +4,8 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import c from "@/content.json";
 
+defineProps({ user: Object });
+
 const { t, locale, messages } = useI18n();
 
 const mainMenu = computed(() => messages.value[locale.value].main_menu);
@@ -26,7 +28,7 @@ const mainMenu = computed(() => messages.value[locale.value].main_menu);
             <Link
               v-for="(m, i) in mainMenu"
               :key="i"
-              :href="m.href"
+              :href="m.url"
               class="footer-link"
             >
               {{ m.label }}
@@ -36,12 +38,14 @@ const mainMenu = computed(() => messages.value[locale.value].main_menu);
         <div>
           <h3 class="footer-title">{{ $t("footer.other_links") }}</h3>
           <nav class="mt-2">
-            <Link :href="route('login')" class="footer-link">{{
-              $t("auth.login")
-            }}</Link>
-            <Link :href="route('register')" class="footer-link">{{
-              $t("auth.register")
-            }}</Link>
+            <div v-if="!user">
+              <Link :href="route('login')" class="footer-link">{{
+                $t("form.login")
+              }}</Link>
+              <Link :href="route('register')" class="footer-link">{{
+                $t("form.register")
+              }}</Link>
+            </div>
             <a href="https://panoramaalam.id" class="footer-link"
               >panoramaalam</a
             >

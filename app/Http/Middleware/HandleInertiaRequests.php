@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Blog;
+use App\Models\Rental;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -37,7 +39,30 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            //
+            'auth' => [
+                'user' => fn() => $request->user()
+                    ? $request->user()->only('id', 'name', 'email', 'role')
+                    : null,
+            ],
+            'searchResults' => function () use ($request) {
+                $query = $request->query('q');
+
+                if ($query) {
+                    return [
+                        'rentalResults' => Rental::filter(['q' => $query])
+                            ->orderBy('name', 'asc')
+                            ->get(['id', 'banner', 'name', 'slug']),
+                        'blogResults' => Blog::filter(['q' => $query])
+                            ->orderBy('title', 'asc')
+                            ->get(['id', 'title', 'banner', 'slug']),
+                    ];
+                }
+
+                return [
+                    'rentalResulst' => [],
+                    'blogResults' => [],
+                ];
+            },
         ];
     }
 }

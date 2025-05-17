@@ -13,11 +13,8 @@ const mainMenu = computed(() => messages.value[locale.value].main_menu);
       v-for="(menu, i) in mainMenu"
       :key="i"
       :href="route(menu.name)"
-      class="px-2 text-sm"
-      :class="{
-        'text-primary':
-          $page.component.toLowerCase() === menu.name.toLowerCase(),
-      }"
+      class="btn-link"
+      :class="menu.url === $page.url ? 'bg-primary/10' : ''"
       >{{ menu.label }}</Link
     >
   </div>
