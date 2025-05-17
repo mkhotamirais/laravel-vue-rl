@@ -12,6 +12,7 @@ const changeLang = () => {
 </script>
 
 <template>
+  <label for="language-select" class="sr-only">Pilih Bahasa</label>
   <select
     v-model="lang"
     @change="changeLang"

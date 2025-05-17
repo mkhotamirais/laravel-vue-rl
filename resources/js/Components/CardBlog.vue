@@ -9,10 +9,11 @@ defineProps({
   <Link :href="route('blog.show', b)" class="group rounded-lg overflow-hidden">
     <img
       :src="`/storage/${b.banner}`"
-      alt=""
+      :alt="smartTrim(b.title, 100)"
       width="250"
       height="250"
       class="w-full h-48 object-cover object-center"
+      loading="lazy"
     />
     <div class="flex flex-col mt-2 transition-all">
       <h3 class="group-hover:underline text-base font-medium text-base mb-2">

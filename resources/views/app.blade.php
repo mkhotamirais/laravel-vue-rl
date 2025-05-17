@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8" />

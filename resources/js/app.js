@@ -8,12 +8,12 @@ import { ZiggyVue } from "../../vendor/tightenco/ziggy";
 import messages from "./lang";
 import Main from "./Layouts/Main.vue";
 
-const userLang = localStorage.getItem("locale") || "en";
+const userLang = localStorage.getItem("locale") || "id";
 const i18n = createI18n({
     legacy: false, // penting: agar bisa pakai $t
     // locale: window?.locale || "en",
     locale: userLang,
-    fallbackLocale: "en",
+    fallbackLocale: "id",
     messages,
 });
 
@@ -44,3 +44,5 @@ createInertiaApp({
         showSpinner: false,
     },
 });
+
+document.documentElement.lang = localStorage.getItem("locale") || "en";

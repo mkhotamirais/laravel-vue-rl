@@ -25,7 +25,7 @@ defineProps({
             <h1 class="text-4xl lg:text-5xl font-semibold">
               {{ $t("home.title") }}
             </h1>
-            <p class="text-gray-500">{{ $t("home.subtitle") }}</p>
+            <p class="text-gray-600">{{ $t("home.subtitle") }}</p>
             <a
               :href="c.links.wa.url"
               class="inline-block bg-primary hover:bg-primary-dark transition-all py-2 text-white px-6 rounded-full text-center"
@@ -45,10 +45,11 @@ defineProps({
               <Link
                 :href="route('blog.show', h)"
                 class="min-w-full h-full inline-block"
+                aria-label="Popular Destinations"
               >
                 <img
                   :src="`/storage/${h.banner}`"
-                  alt=""
+                  :alt="h.title"
                   width="500"
                   height="500"
                   class="w-full h-full object-cover object-center"
@@ -64,7 +65,7 @@ defineProps({
       <div class="container">
         <div class="mb-4 space-y-2">
           <h2 class="h2">{{ $t("rental.title") }}</h2>
-          <p class="text-gray-500">{{ $t("rental.subtitle") }}</p>
+          <p class="text-gray-600">{{ $t("rental.subtitle") }}</p>
           <Line class="py-2" />
         </div>
         <div

@@ -14,10 +14,11 @@ defineProps({ r: Object });
     <Link :href="route('sewa-mobil.show', r)">
       <img
         :src="`storage/${r.banner}`"
-        alt="image"
+        :alt="r.name"
         width="300"
         height="300"
         class="w-full"
+        loading="lazy"
       />
     </Link>
     <div class="relative z-20 p-4 flex space-y-2 flex-col items-center">

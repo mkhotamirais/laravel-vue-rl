@@ -40,6 +40,7 @@ const submit = () => {
       @click="open"
       type="button"
       class="px-3 py-2 hover:bg-primary/10 rounded-lg"
+      aria-label="Global Search"
     >
       <i class="fa-solid fa-magnifying-glass text-sm"></i>
     </button>
