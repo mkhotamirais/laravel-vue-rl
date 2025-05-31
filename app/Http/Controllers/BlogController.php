@@ -18,7 +18,7 @@ class BlogController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware('auth', except: ['show']),
+            new Middleware('auth', except: ['index', 'show']),
         ];
     }
 
