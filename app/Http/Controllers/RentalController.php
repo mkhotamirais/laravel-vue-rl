@@ -58,7 +58,7 @@ class RentalController extends Controller
 
     public function show(Rental $rental)
     {
-        $otherRentals = Rental::where('id', '!=', $rental->id)->get();
+        $otherRentals = Rental::where('id', '!=', $rental->id)->take(4)->get();
         $latestBlogs = Blog::latest()->take(4)->get();
         return inertia('Rental/Show', compact('rental', 'otherRentals', 'latestBlogs'));
     }

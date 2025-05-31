@@ -3,11 +3,11 @@
   "main_menu": [
     {"label": "Home", "url": "/", "name": "home"},
     {"label": "Sewa Mobil", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
-    {"label": "Blog & Artickel", "url": "/blog", "name": "blog.index"}
+    {"label": "Blog & Artikel", "url": "/blog", "name": "blog.index"}
   ],
   "user_menu": [
     {"label": "Sewa Mobil", "url": "/sewa-mobil", "name": "sewa-mobil.index"},
-    {"label": "Blog & Artickel", "url": "/blog", "name": "blog.index"},
+    {"label": "Blog & Artikel", "url": "/blog", "name": "blog.index"},
     {"label": "Kategori Blog", "url": "/blogcat", "name": "blogcat.index"}
   ],
   "form": {
