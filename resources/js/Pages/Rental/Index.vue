@@ -29,7 +29,14 @@ const chooseCategory = (cat) => {
 </script>
 
 <template>
-  <Head title="Sewa Mobil Lombok" />
+  <Head>
+    <title>{{ $t("rental.title") }}</title>
+    <meta
+      head-key="description"
+      name="description"
+      :content="$t('rental.subtitle')"
+    />
+  </Head>
   <section class="bg-slate-100 flex-1">
     <div class="text-center bg-white py-8 px-0 lg:px-24 shadow">
       <div class="container">
