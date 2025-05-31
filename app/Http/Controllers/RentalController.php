@@ -6,10 +6,19 @@ use App\Models\Blog;
 use App\Models\Rental;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Storage;
 
-class RentalController extends Controller
+class RentalController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth', except: ['show']),
+        ];
+    }
+
     public function index(Request $request)
     {
         $rentals = Rental::filter(request(['rentalcat']))

@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 
-// class BlogController extends Controller implements HasMiddleware
-class BlogController extends Controller
+class BlogController extends Controller implements HasMiddleware
 {
-    // public static function middleware(): array
-    // {
-    //     return [
-    //         new Middleware('auth', except: ['show']),
-    //     ];
-    // }
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth', except: ['show']),
+        ];
+    }
 
     public function index()
     {
