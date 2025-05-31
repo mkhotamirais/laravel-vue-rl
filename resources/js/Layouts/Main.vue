@@ -23,18 +23,18 @@ const user = computed(() => page.props.auth.user);
     <meta
       head-key="description"
       name="description"
-      content="Layanan sewa Mobil di Lombok untuk memudahkan Anda menjelajahi keindahan alam Lombok yang menakjubkan."
+      :content="$t('home.subtitle')"
     />
   </Head>
   <div class="flex flex-col min-h-screen">
     <!-- header -->
     <header class="h-16 sticky top-0 bg-white shadow z-50">
       <div class="container flex items-center justify-between">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1">
           <NavMobile />
           <Logo />
         </div>
-        <nav class="flex items-center gap-2">
+        <nav class="flex items-center gap-1">
           <NavDesktop />
           <NavUser :user="user" />
           <Search :blogResults="blogResults" :rentalResults="rentalResults" />

@@ -27,9 +27,16 @@ const filterCategory = (c) => {
 </script>
 
 <template>
-  <Head title="Blog & Artikel" />
+  <Head>
+    <title>{{ $t("blog.title") }}</title>
+    <meta
+      head-key="description"
+      name="description"
+      :content="$t('blog.subtitle')"
+    />
+  </Head>
   <section class="bg-slate-100">
-    <div class="text-center bg-white py-8 px-3 shadow">
+    <div class="text-center bg-white py-8 px-0 lg:px-24 shadow">
       <div class="container">
         <h1 class="h1 mb-4">{{ $t("blog.title") }}</h1>
         <p class="text-gray-500">{{ $t("blog.subtitle") }}</p>

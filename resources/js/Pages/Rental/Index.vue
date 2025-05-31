@@ -31,11 +31,11 @@ const chooseCategory = (cat) => {
 <template>
   <Head title="Sewa Mobil Lombok" />
   <section class="bg-slate-100 flex-1">
-    <div class="text-center bg-white py-8 px-3 shadow">
+    <div class="text-center bg-white py-8 px-0 lg:px-24 shadow">
       <div class="container">
         <h1 class="h1 mb-4">{{ $t("rental.title") }}</h1>
         <p class="text-gray-500">{{ $t("rental.subtitle") }}</p>
-        <div class="mt-4 flex gap-2 justify-center">
+        <div class="mt-4 flex gap-1 justify-center">
           <button
             v-for="(c, i) in categories"
             :key="i"
