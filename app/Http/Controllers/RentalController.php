@@ -31,7 +31,7 @@ class RentalController extends Controller implements HasMiddleware
                     ELSE 5
                 END
             ")
-            ->paginate(4);
+            ->paginate(8);
 
         $msg = session('msg');
         return inertia('Rental/Index', compact('rentals', 'msg'));

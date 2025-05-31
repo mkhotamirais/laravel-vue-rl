@@ -15,8 +15,8 @@ const goToPage = () => {
   ) {
     router.get(
       props.paginator.path + "?page=" + currentPage.value,
-      {},
-      { preserveScroll: true }
+      {}
+      // { preserveScroll: true }
     );
   }
 };
