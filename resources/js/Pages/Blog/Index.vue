@@ -56,7 +56,11 @@ const filterCategory = (c) => {
             >
               <Link :href="route('blog.show', b)" class="block w-full h-full">
                 <img
-                  :src="`/storage/${b.banner}`"
+                  :src="
+                    b?.banner
+                      ? `/storage/${b.banner}`
+                      : '/storage/images/logo-rentallombok.png'
+                  "
                   alt=""
                   width="200"
                   height="200"

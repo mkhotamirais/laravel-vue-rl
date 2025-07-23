@@ -34,7 +34,11 @@ defineProps({
             </span>
           </p>
           <img
-            :src="`/storage/${blog.banner}`"
+            :src="
+              b.banner
+                ? `/storage/${blog.banner}`
+                : '/storage/images/logo-rentallombok.png'
+            "
             alt=""
             width="500"
             height="500"
