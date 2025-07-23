@@ -51,7 +51,7 @@ class BlogController extends Controller implements HasMiddleware
             'title' => 'required|max:255|unique:blogs',
             'content' => 'required',
             'tags' => 'nullable|string',
-            'blogcat_id' => 'nullable|integer|exists:blogcats,id',
+            'blogcat_id' => 'required|integer|exists:blogcats,id',
             'banner' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
 

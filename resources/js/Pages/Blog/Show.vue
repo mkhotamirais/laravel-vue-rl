@@ -26,7 +26,7 @@ defineProps({
           <h1 class="h1 !mb-2">{{ blog.title }}</h1>
           <p class="text-sm text-gray-500">
             <span class="capitalize">
-              {{ blog.blogcat.name }}
+              {{ blog.blogcat?.name || "Rentallombok Blog" }}
             </span>
             |
             <span>
