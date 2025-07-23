@@ -31,7 +31,7 @@ const showPass = ref(false);
         :type="type === 'password' ? (showPass ? 'text' : 'password') : type"
         :placeholder="placeholder"
         v-model="model"
-        class="border block w-full rounded-md py-2 pr-3 pl-9 text-sm dark:text-slate-200 border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-indigo-400 focus:border-indigo-400 plaholder:text-slate-400"
+        class="border block w-full rounded-md py-2 pr-3 pl-9 text-sm !text-slate-700 dark:text-slate-200 border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-indigo-400 focus:border-indigo-400 plaholder:text-slate-400"
         :class="{
           '!border-danger': error,
           'pr-12': type === 'password',
