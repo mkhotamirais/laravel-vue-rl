@@ -68,7 +68,9 @@ const filterCategory = (c) => {
                   <h3 class="h3 mb-2">{{ smartTrim(b.title, 40) }}</h3>
                 </Link>
                 <div class="flex gap-2 items-center capitalize">
-                  <span class="badge">{{ b.blogcat.name }}</span>
+                  <span class="badge">{{
+                    b.blogcat?.name || "Rentallombok Blog"
+                  }}</span>
                   <span>·</span>
                   <span
                     v-for="(tag, index) in b.tags
