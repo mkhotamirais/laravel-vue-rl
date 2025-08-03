@@ -71,7 +71,7 @@ const filterCategory = (c) => {
                 <Link :href="route('blog.show', b)" class="hover:underline">
                   <h3 class="h3 mb-2">{{ smartTrim(b.title, 40) }}</h3>
                 </Link>
-                <div class="flex gap-2 items-center capitalize">
+                <div class="flex gap-2 items-center capitalize flex-wrap">
                   <span class="badge">{{
                     b.blogcat?.name || "Rentallombok Blog"
                   }}</span>

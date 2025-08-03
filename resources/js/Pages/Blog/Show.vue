@@ -35,7 +35,7 @@ defineProps({
           </p>
           <img
             :src="
-              b.banner
+              blog?.banner
                 ? `/storage/${blog.banner}`
                 : '/storage/images/logo-rentallombok.png'
             "
@@ -46,7 +46,7 @@ defineProps({
           />
           <p v-html="blog.content" class="text-content"></p>
         </article>
-        <div class="w-full md:w-120 sticky top-20 my-6 bg-white p-4 rounded-lg">
+        <div class="w-full md:w-120 sticky top-18 my-6 bg-white p-4 rounded-lg">
           <h2 class="h2 mb-4">Blog Terbaru</h2>
           <div>
             <template v-for="(b, i) in latestBlogs" :key="i">
