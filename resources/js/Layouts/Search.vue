@@ -46,7 +46,7 @@ const submit = () => {
     </button>
     <div
       @click="close"
-      class="fixed inset-0 bg-black/60 z-50 transition-all flex items-center justify-center"
+      class="fixed inset-0 bg-black/80 z-50 transition-all flex items-center justify-center"
       :class="isOpen ? 'visible opacity-100' : 'invisible opacity-0'"
     >
       <div
@@ -55,13 +55,13 @@ const submit = () => {
       >
         <form
           @submit.prevent="submit"
-          class="flex border w-full rounded mb-2 sticky top-0"
+          class="flex border border-gray-500 w-full rounded mb-2 sticky top-0"
         >
           <input
             ref="inputRef"
             v-model="form.q"
             type="search"
-            class="py-2 px-3 focus:outline-none w-full"
+            class="py-3 px-5 focus:outline-none w-full"
             placeholder="Search.."
           />
           <button type="submit" class="px-3 text-md">
@@ -70,7 +70,7 @@ const submit = () => {
         </form>
         <div
           v-if="searchKey"
-          class="p-3 h-100 overflow-y-scroll border rounded transition-all"
+          class="p-3 h-100 overflow-y-scroll border border-gray-500 rounded transition-all"
         >
           <p>
             Results for

@@ -55,7 +55,11 @@ defineProps({
                 class="group shadow hover:shadow-md flex rounded gap-2 overflow-hidden mb-2"
               >
                 <img
-                  :src="`/storage/${b.banner}`"
+                  :src="
+                    b?.banner
+                      ? `/storage/${b.banner}`
+                      : `/storage/images/logo-rentallombok.png`
+                  "
                   alt=""
                   width="100"
                   height="100"
