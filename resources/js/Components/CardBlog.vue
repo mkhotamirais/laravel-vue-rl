@@ -8,7 +8,11 @@ defineProps({
 <template>
   <Link :href="route('blog.show', b)" class="group rounded-lg overflow-hidden">
     <img
-      :src="`/storage/${b.banner}`"
+      :src="
+        b.banner
+          ? `/storage/${b.banner}`
+          : '/storage/images/logo-rentallombok.png'
+      "
       :alt="smartTrim(b.title, 100)"
       width="250"
       height="250"

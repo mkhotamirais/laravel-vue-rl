@@ -48,7 +48,11 @@ defineProps({
                 aria-label="Popular Destinations"
               >
                 <img
-                  :src="`/storage/${h.banner}`"
+                  :src="
+                    h?.banner
+                      ? `/storage/${h.banner}`
+                      : '/storage/images/logo-rentallombok.png'
+                  "
                   :alt="h.title"
                   width="500"
                   height="500"
